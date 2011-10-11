@@ -1,0 +1,52 @@
+{
+  "author": "Martin Wawrusch <martin@wawrusch.com> (http://martinatsunset.com)",
+  "name": "hook.io-wget",
+  "description": "A hook to retrieve files through http. Based on the http-get module by Stefan Rusu.",
+  "version": "0.0.1",
+  "main" : "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scottyapp/hook.io-wget.git"
+  },
+  "bin" : {
+    "hook.io-wget" : "./bin/hookio-wget"
+  },
+  "directories" : {
+    "lib" : "./lib",
+    "test" : "./spec"
+  },
+  "keywords" : [
+    "hook.io","download","wget","downloader","http"
+  ],
+  "scripts": {
+    "test": "vows --spec spec/*-spec.coffee",
+    "watch" : "coffee -c -w  -o lib src"
+  },
+  "engines": {
+    "node": ">=0.4.8"
+  },
+  "dependencies": {
+    "optimist" : "*",
+    "underscore" : "*",
+    "async" : "*",
+    "http-get" : ">= 0.3.8",
+    "hook.io" : ">= 0.7.7",
+    "should" : ">=0.2.1",
+    "vows" : ">= 0.5.9",
+    "nconf" : ">= 0.4.3"
+    
+  },
+  "devDependencies": {
+    "colors" : ">= 0.5.0",
+    "should" : ">=0.2.1",    
+    "vows" : ">= 0.5.9",
+    "nock" : "*"
+  },
+  "bugs": { "url": "http://github.com/scottyapp/hook.io-wget/issues" },
+    "licenses": [
+      { "type": "MIT",
+        "url": "http://github.com/scottyapp/hook.io-wget/raw/master/LICENSE"
+      }
+    ]
+    
+}
