@@ -90,8 +90,12 @@ Listened to lots of Pink while writing this.
 
 ## Release Notes
 
+### 0.0.5
+
+* Tests added, but not really working...
 
 ### 0.0.4 
+
 * Now supports @username:password in urls for basic authentication
 
 ### 0.0.3
@@ -116,7 +120,7 @@ Listened to lots of Pink while writing this.
 # Publish new version
 
 * Change version in package.json
-* git tag -a v0.0.4 -m 'version 0.0.4'
+* git tag -a v0.0.5 -m 'version 0.0.5'
 * git push --tags
 * npm publish
 
