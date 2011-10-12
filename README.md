@@ -93,6 +93,7 @@ Listened to lots of Pink while writing this.
 * Added image assets
 * exposed version and hook
 * removed unnecessary dependencies
+* added head message
 
 ### 0.0.2
 
