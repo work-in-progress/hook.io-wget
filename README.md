@@ -14,15 +14,14 @@ npm install -g hook.io-wget
 
 	./bin/hookio-wget 
 
-returns a json string. Or call it programmatically like so:
 
 ### Coffeescript
 
-	hook = require "hook.io-wget"
-    
+	hook = require("hook.io-wget").Wget
+ 
 ### Javascript
 
-	var hook = require("hook.io-wget");
+	var hook = require("hook.io-wget").Wget;
 
 ## Advertising :)
 
