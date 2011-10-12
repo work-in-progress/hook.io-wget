@@ -25,24 +25,24 @@ option is included for debugging and testing purposes, in general you will want 
 
 wget::download [in]
 
-	url: the url to download from. Required. Redirects are supported
-	target: the target file name. Required.
-	headers: Optional headers to pass along. See http-get for details
-	nogzip:  Optionally prevents automatic uncompression. See http-get for details
-	proxy: Optional proxy settings. See http-get for details
-	redirects: Optional max number of redirects. See http-get for details
+	* url: the url to download from. Required. Redirects are supported
+	* target: the target file name. Required.
+	* headers: Optional headers to pass along. See http-get for details
+	* nogzip:  Optionally prevents automatic uncompression. See http-get for details
+	* proxy: Optional proxy settings. See http-get for details
+	* redirects: Optional max number of redirects. See http-get for details
 
 wget::error [out]
 
-	error: See examples/download-error.txt for content
+	* error: See examples/download-error.txt for content
 
 wget::download-complete [out]
 
-	code : The http code
-	pathToFile : The path to the downloaded file
-	headers : The headers from the response
-	requestedUrl : The originally requested url
-	downloadedUrl : The actual url, after redirects
+	* code : The http code
+	* pathToFile : The path to the downloaded file
+	* headers : The headers from the response
+	* requestedUrl : The originally requested url
+	* downloadedUrl : The actual url, after redirects
 
 See examples/download-complete.txt
 
