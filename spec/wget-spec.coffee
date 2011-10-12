@@ -22,11 +22,11 @@ vows.describe("integration_task")
   .addBatch 
     "WHEN creating a task container without tasks and we call getTasks": 
       topic:  () ->
-        specHelper.hook.on "wget::download", (data) =>
+        specHelper.hook.on "wget::download-complete", (data) =>
           @callback(null,data)
         specHelper.hook.emit "wget::download",
           url : specHelper.requestUrl + specHelper.goodPath
-          target : "/Users/mwawrusch/Documents/test1.txt"
+          target : "~/Documents/test1.txt" # Get some tmp filename here
         return
       "THEN it must not fails": (err,data) ->
         assert.isNull err

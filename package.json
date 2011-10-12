@@ -63,43 +63,25 @@
         
       ],
     
-    "in" : [
-      {
+    "in" : [{
         "name" : "wget::download",
-        "signatures" : [
-        
-        ]
-      },
-      {
+        "signatures" : []
+      },{
         "name" : "wget::head",
-        "signatures" : [
-        
-        ]
+        "signatures" : []
       }
-      
     ],
     
-    "out" : [
-      {
+    "out" : [{
         "name" : "wget::error",
-        "signatures" : [
-      
-        ]
-      },
-      {
+        "signatures" : []
+      },{
         "name" : "wget::download-complete",
-        "signatures" : [
-        
-        ]
-      },
-      {
+        "signatures" : []
+      },{
         "name" : "wget::head-complete",
-        "signatures" : [
-        
-        ]
+        "signatures" : []
       }
-      
     ]
   }
-    
 }
