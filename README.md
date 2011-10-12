@@ -90,6 +90,10 @@ Listened to lots of Pink while writing this.
 
 ## Release Notes
 
+### 0.0.6
+
+* Tests working now
+
 ### 0.0.5
 
 * Tests added, but not really working...
@@ -120,7 +124,7 @@ Listened to lots of Pink while writing this.
 # Publish new version
 
 * Change version in package.json
-* git tag -a v0.0.5 -m 'version 0.0.5'
+* git tag -a v0.0.6 -m 'version 0.0.6'
 * git push --tags
 * npm publish
 

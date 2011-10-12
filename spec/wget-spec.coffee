@@ -26,7 +26,7 @@ vows.describe("integration_task")
           @callback(null,data)
         specHelper.hook.emit "wget::download",
           url : specHelper.requestUrl + specHelper.goodPath
-          target : "~/Documents/test1.txt" # Get some tmp filename here
+          target : "tmp/test1.txt" # Get some tmp filename here
         return
       "THEN it must not fails": (err,data) ->
         assert.isNull err
