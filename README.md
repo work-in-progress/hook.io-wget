@@ -70,11 +70,13 @@ The package config contains experimental hook.io schema definitions. The definit
 
 ### Coffeescript
 
-	hook = require("hook.io-wget").Wget
+	Wget = require("hook.io-wget").Wget
+	hook = new Wget(name: 'wget')
  
 ### Javascript
 
-	var hook = require("hook.io-wget").Wget;
+	var Wget = require("hook.io-wget").Wget;
+	var hook = new Wget({ name: 'wget' });
 
 ## Advertising :)
 
@@ -114,7 +116,7 @@ Listened to lots of Pink while writing this.
 # Publish new version
 
 * Change version in package.json
-* git tag -a v0.0.3 -m 'version 0.0.3'
+* git tag -a v0.0.4 -m 'version 0.0.4'
 * git push --tags
 * npm publish
 
