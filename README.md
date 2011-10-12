@@ -24,6 +24,7 @@ option is included for debugging and testing purposes, in general you will want 
 ### Messages
 
 wget::download [in]
+
 	url: the url to download from. Required. Redirects are supported
 	target: the target file name. Required.
 	headers: Optional headers to pass along. See http-get for details
@@ -36,6 +37,7 @@ wget::error [out]
 	error: See examples/download-error.txt for content
 
 wget::download-complete [out]
+
 	code : The http code
 	pathToFile : The path to the downloaded file
 	headers : The headers from the response
