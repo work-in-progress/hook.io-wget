@@ -23,7 +23,7 @@
     "watch" : "coffee -c -w  -o lib src"
   },
   "engines": {
-    "node": ">=0.4.8"
+    "node": ">=0.4.11"
   },
   "dependencies": {
     "optimist" : "*",
@@ -43,10 +43,28 @@
     "nock" : "*"
   },
   "bugs": { "url": "http://github.com/scottyapp/hook.io-wget/issues" },
-    "licenses": [
-      { "type": "MIT",
-        "url": "http://github.com/scottyapp/hook.io-wget/raw/master/LICENSE"
+  "licenses": [
+    { "type": "MIT",
+      "url": "http://github.com/scottyapp/hook.io-wget/raw/master/LICENSE"
+    }
+  ],
+  "hook" : {
+    "type" : "Wget",
+    "images" : {
+      
+    },
+    
+    "in" : [
+      {
+        "name" : "wget::download",
+        "signatures" : [
+        
+        ]
       }
+    ],
+    
+    "out" : [
     ]
+  }
     
 }

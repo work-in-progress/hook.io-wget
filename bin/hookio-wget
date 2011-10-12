@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+var Wget = require('../lib/index').Wget;
+
+var hook = new Wget({
+  name: 'wget'
+});
+
+hook.start();

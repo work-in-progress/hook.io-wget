@@ -4,7 +4,7 @@ A hook to retrieve files through http. Based on the http-get module by Stefan Ru
 
 [![Build Status](https://secure.travis-ci.org/git@github.com:scottyapp/hook.io-wget.git/hook.io-wget.png)](http://travis-ci.org/scottyapp/hook.io-wget)
 
-Please note that travis-ci.org hasn't been configured yet.
+Please note that travis-ci.org does not build this correctly because the module requires node v 0.4.11 but travis 0.4.8 installed at this point.
 
 ## Install
 
