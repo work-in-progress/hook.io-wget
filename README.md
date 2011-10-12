@@ -18,6 +18,35 @@ npm install -g hook.io-wget
 
 	./bin/hookio-wget 
 
+This starts a hook and reads the local config.json. The files found there will be downloaded. A sample is provided in examples/example-config.json. The config
+option is included for debugging and testing purposes, in general you will want to use messages and code.s
+
+### Messages
+
+wget::download [in]
+	url: the url to download from. Required. Redirects are supported
+	target: the target file name. Required.
+	headers: Optional headers to pass along. See http-get for details
+	nogzip:  Optionally prevents automatic uncompression. See http-get for details
+	proxy: Optional proxy settings. See http-get for details
+	redirects: Optional max number of redirects. See http-get for details
+
+wget::error [out]
+
+	error: See examples/download-error.txt for content
+
+wget::download-complete [out]
+	code : The http code
+	pathToFile : The path to the downloaded file
+	headers : The headers from the response
+	requestedUrl : The originally requested url
+	downloadedUrl : The actual url, after redirects
+
+See examples/download-complete.txt
+
+### Hook.io Schema support 
+
+The package config contains experimental hook.io schema definitions. 
 
 ### Coffeescript
 
@@ -39,9 +68,11 @@ Listened to lots of Pink while writing this.
 
 ## Release Notes
 
-### 0.0.3
+### 0.0.3 (not published yet)
 
 * Added image assets
+* exposed version and hook
+* removed unnecessary dependencies
 
 ### 0.0.2
 
