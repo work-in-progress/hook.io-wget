@@ -1,6 +1,6 @@
 ## About hook.io-wget
 
-A hook to retrieve files through http. Based on the http-get module by Stefan Rusu.
+A hook to download files through HTTP. Based on the http-get module by Stefan Rusu.
 
 IMPORTANT: THIS IS A WORK IN PROGRESS - IF YOU USE IT FIX THE VERSION - UPDATES WILL BREAK
 
@@ -8,7 +8,7 @@ IMPORTANT: THIS IS A WORK IN PROGRESS - IF YOU USE IT FIX THE VERSION - UPDATES 
 
 [![Build Status](https://secure.travis-ci.org/scottyapp/hook.io-wget.png)](http://travis-ci.org/scottyapp/hook.io-wget.png)
 
-Please note that travis-ci.org does not build this correctly because the module requires node v 0.4.11 but travis 0.4.8 installed at this point.
+Please note that travis-ci.org does not build this correctly because the module requires node v 0.4.11 but travis has 0.4.8 installed at this point.
 
 ## Install
 
