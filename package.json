@@ -45,9 +45,21 @@
   ],
   "hook" : {
     "type" : "Wget",
-    "images" : {
-      
-    },
+    "images" : [
+        { 
+          "size" : "29x29",
+          "url" : "http://github.com/scottyapp/hook.io-wget/raw/master/assets/wget29x29.png"
+        },
+        { 
+          "size" : "57x57",
+          "url" : "http://github.com/scottyapp/hook.io-wget/raw/master/assets/wget57x57.png"
+        },
+        { 
+          "size" : "114x114",
+          "url" : "http://github.com/scottyapp/hook.io-wget/raw/master/assets/wget114x114.png"
+        }
+        
+      ],
     
     "in" : [
       {
