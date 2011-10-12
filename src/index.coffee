@@ -12,13 +12,19 @@ Wget = exports.Wget = (options) ->
   self.on "hook::ready", ->  
   
     self.on "wget::download", (data)->
-      #console.log JSON.stringify(data.checkResult)
       self._download(data)
+
+    self.on "wget::head", (data)->
+      self._head(data)
       
-    for download in self.downloads
+    for download in (self.downloads || [])
       self.emit "wget::download",
         url : download.url
         target : download.target
+
+    for head in (self.heads || [])
+      self.emit "wget::head",
+        url : head.url
     
 util.inherits Wget, Hook
 
@@ -38,7 +44,9 @@ Wget.prototype._download = (data) ->
   httpget.get options ,data.target, (err,result) =>
     if err
       console.error err
-      @emit "wget::error", error : err
+      @emit "wget::error", 
+        error : err
+        head : false
     else
       console.log result
       @emit "wget::download-complete", 
@@ -47,5 +55,33 @@ Wget.prototype._download = (data) ->
         #buffer : if result.buffer? result.buffer else null
         headers : result.headers
         requestedUrl : data.url
+        result : result
+
+
+Wget.prototype._head = (data) ->
+  console.log "Obtaining head for #{data.url}".cyan
+  
+  options =
+    url : data.url
+  
+  # Need to check if the extence op is really necessary. 
+  options.headers = data.headers if data.headers?
+  options.nogzip = data.nogzip if data.nogzip?
+  options.proxy = data.proxy if data.proxy?
+  options.redirects = data.redirects if data.redirects?
+  
+  httpget.head options , (err,result) =>
+    if err
+      console.error err
+      @emit "wget::error", 
+        error : err
+        head : true
+    else
+      console.log result
+      @emit "wget::head-complete", 
+        code : result.code
+        headers : result.headers
+        requestedUrl : data.url
         downloadedUrl : if result.url? then result.url else data.url 
+        result : result
     

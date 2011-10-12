@@ -18,7 +18,7 @@ npm install -g hook.io-wget
 
 	./bin/hookio-wget 
 
-This starts a hook and reads the local config.json. The files found there will be downloaded. A sample is provided in examples/example-config.json. The config
+This starts a hook and reads the local config.json. The files found there will be downloaded or a head will be requested. A sample is provided in examples/example-config.json. The config
 option is included for debugging and testing purposes, in general you will want to use messages and code.
 
 ### Messages
@@ -32,9 +32,18 @@ wget::download [in]
 	proxy: Optional proxy settings. See http-get for details
 	redirects: Optional max number of redirects. See http-get for details
 
+wget::head [in]
+
+	url: the url to download from. Required. Redirects are supported
+	target: the target file name. Required.
+	headers: Optional headers to pass along. See http-get for details
+	proxy: Optional proxy settings. See http-get for details
+	redirects: Optional max number of redirects. See http-get for details
+
 wget::error [out]
 
 	error: See examples/download-error.txt for content
+	head: Boolean, true if this was a head only operation
 
 wget::download-complete [out]
 
@@ -43,8 +52,17 @@ wget::download-complete [out]
 	headers : The headers from the response
 	requestedUrl : The originally requested url
 	downloadedUrl : The actual url, after redirects
+	result : The verbatim result from http-get
 
 See examples/download-complete.txt
+
+wget::head-complete [out]
+
+	code : The http code
+	headers : The headers from the response
+	requestedUrl : The originally requested url
+	downloadedUrl : The actual url, after redirects
+	result : The verbatim result from http-get
 
 ### Hook.io Schema support 
 
@@ -91,8 +109,7 @@ Listened to lots of Pink while writing this.
 # Publish new version
 
 * Change version in package.json
-* 
-* git tag -a v0.0.2 -m 'version 0.0.2'
+* git tag -a v0.0.3 -m 'version 0.0.3'
 * git push --tags
 * npm publish
 
