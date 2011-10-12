@@ -1,7 +1,6 @@
 Hook = require('hook.io').Hook
 util = require('util')
 colors = require('colors')    
-async = require 'async'
 httpget = require 'http-get'
 
 require('pkginfo')(module,'version','hook')
