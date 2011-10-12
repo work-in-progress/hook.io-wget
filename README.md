@@ -19,7 +19,7 @@ npm install -g hook.io-wget
 	./bin/hookio-wget 
 
 This starts a hook and reads the local config.json. The files found there will be downloaded. A sample is provided in examples/example-config.json. The config
-option is included for debugging and testing purposes, in general you will want to use messages and code.s
+option is included for debugging and testing purposes, in general you will want to use messages and code.
 
 ### Messages
 
@@ -48,7 +48,7 @@ See examples/download-complete.txt
 
 ### Hook.io Schema support 
 
-The package config contains experimental hook.io schema definitions. 
+The package config contains experimental hook.io schema definitions. The definition is also exported as hook.
 
 ### Coffeescript
 

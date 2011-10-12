@@ -29,6 +29,7 @@ Wget.prototype._download = (data) ->
   options =
     url : data.url
   
+  # Need to check if the extence op is really necessary. 
   options.headers = data.headers if data.headers?
   options.nogzip = data.nogzip if data.nogzip?
   options.proxy = data.proxy if data.proxy?

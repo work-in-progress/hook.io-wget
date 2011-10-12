@@ -46,6 +46,7 @@
   ],
   "hook" : {
     "type" : "Wget",
+    "description" : "Download files through HTTP.",
     "images" : [
         { 
           "size" : "29x29",
@@ -72,6 +73,19 @@
     ],
     
     "out" : [
+      {
+        "name" : "wget::error",
+        "signatures" : [
+      
+        ]
+      },
+      {
+        "name" : "wget::download-complete",
+        "signatures" : [
+        
+        ]
+      }
+      
     ]
   }
     
