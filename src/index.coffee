@@ -3,6 +3,8 @@ util = require('util')
 colors = require('colors')    
 async = require 'async'
 httpget = require 'http-get'
+
+require('pkginfo')(module,'version','hook')
   
 Wget = exports.Wget = (options) ->
   self = @

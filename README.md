@@ -54,8 +54,14 @@ Listened to lots of Pink while writing this.
 ## Internal Stuff
 
 * npm run-script watch
-* npm publish
+
+# Publish new version
+
+* Change version in package.json
+* 
 * git tag -a v0.0.2 -m 'version 0.0.2'
+* git push --tags
+* npm publish
 
 ## Contributing to hook.io-wget
  

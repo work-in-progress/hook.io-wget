@@ -26,11 +26,12 @@
     "node": ">=0.4.11"
   },
   "dependencies": {
-    "colors" : ">= 0.5.0",
-    "underscore" : "*",
-    "async" : "*",
-    "http-get" : ">= 0.3.8",
-    "hook.io" : ">= 0.7.7"    
+    "colors" : "~ 0.5",
+    "underscore" : "1.2.x",
+    "async" : "0.1.x",
+    "http-get" : "0.3.x",
+    "hook.io" : "~ 0.7.7",
+    "pkginfo" : "~ 0.2"    
   },
   "devDependencies": {
     "should" : ">=0.2.1",    
