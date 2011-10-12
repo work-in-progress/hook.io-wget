@@ -2,7 +2,7 @@
   "author": "Martin Wawrusch <martin@wawrusch.com> (http://martinatsunset.com)",
   "name": "hook.io-wget",
   "description": "A hook to retrieve files through http. Based on the http-get module by Stefan Rusu.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main" : "lib/index.js",
   "repository": {
     "type": "git",

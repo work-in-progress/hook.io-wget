@@ -88,7 +88,11 @@ Listened to lots of Pink while writing this.
 
 ## Release Notes
 
-### 0.0.3 (not published yet)
+
+### 0.0.4 
+* Now supports @username:password in urls for basic authentication
+
+### 0.0.3
 
 * Added image assets
 * exposed version and hook
