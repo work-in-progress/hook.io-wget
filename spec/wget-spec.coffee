@@ -6,12 +6,15 @@ main = require '../lib/index'
 
 specHelper = require './spec_helper'
 
-
-            
-# Please note that the specs here are mimicing a real use case,
-# hence the namespacing with : and stuff.
-
+# TODO: More Specs
+# TODO: Actually check that the correct stuff has been downloaded.
 vows.describe("integration_task")
+  .addBatch
+    "CLEANUP TEMP":
+      topic: () ->
+        specHelper.cleanTmpFiles ['test1.txt']
+      "THEN IT SHOULD BE CLEAN :)": () ->
+        assert.isTrue true        
   .addBatch
     "SETUP HOOK" :
       topic: () -> 
@@ -20,14 +23,13 @@ vows.describe("integration_task")
       "THEN IT SHOULD SET UP :)": () ->
         assert.isTrue true
   .addBatch 
-    "WHEN creating a task container without tasks and we call getTasks": 
+    "WHEN sending the download message": 
       topic:  () ->
-        specHelper.hook.on "wget::download-complete", (data) =>
-          @callback(null,data)
+        specHelper.hookMeUp @callback
         specHelper.hook.emit "wget::download",
           url : specHelper.requestUrl + specHelper.goodPath
-          target : "tmp/test1.txt" # Get some tmp filename here
+          target : specHelper.tmpPath("test1.txt")
         return
-      "THEN it must not fails": (err,data) ->
-        assert.isNull err
+      "THEN it must receive the download complete event": (err,event,data) ->
+        assert.equal event,"wget::download-complete" 
   .export module

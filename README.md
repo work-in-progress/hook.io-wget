@@ -2,7 +2,6 @@
 
 A hook to download files through HTTP. Based on the http-get module by Stefan Rusu.
 
-IMPORTANT: THIS IS A WORK IN PROGRESS - IF YOU USE IT FIX THE VERSION - UPDATES WILL BREAK
 
 ![Wget Icon](http://github.com/scottyapp/hook.io-wget/raw/master/assets/wget114x114.png)
 
