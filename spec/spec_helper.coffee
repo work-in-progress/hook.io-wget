@@ -1,5 +1,6 @@
 main = require '../lib/index'
 nock = require 'nock'
+fs = require "fs"
 
 module.exports = 
   hook: null
@@ -16,6 +17,7 @@ module.exports =
   notFoundPath: "/badone.tbz"
     
   setup: (cb) ->
+    @createTemp()
     @nocked = nock(@requestUrl) 
                 .get(@goodPath)
                 .replyWithFile(200,"#{__dirname}/fixtures/success.txt")
@@ -38,10 +40,18 @@ module.exports =
   fixturePath: (fileName) ->
     "#{__dirname}/fixtures/#{fileName}"
 
+  createTemp: ->
+    try
+      fs.mkdirSync "#{__dirname}/../tmp/",0755
+    catch ignore
+      console.log "Failed to create tmp folder #{ignore}"
+
   tmpPath: (fileName) ->
     "#{__dirname}/../tmp/#{fileName}"
 
   cleanTmpFiles: (fileNames) ->
+    @createTemp()
+    
     for file in fileNames
       try
         fs.unlinkSync @tmpPath(file)
